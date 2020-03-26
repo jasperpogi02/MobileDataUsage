@@ -21,6 +21,18 @@ class EntryListViewController: UIViewController, EntryListDisplayLogic, EntryLis
     var interactor: EntryListBusinessLogic?
     var router: (NSObjectProtocol & EntryListRoutingLogic & EntryListDataPassing)?
     
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+      super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+      setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+      setup()
+    }
+    
     lazy var myView: EntryListView = {
         let view = EntryListView()
         view.delegate = self
@@ -83,14 +95,13 @@ class EntryListViewController: UIViewController, EntryListDisplayLogic, EntryLis
             multiplier: 1,
             constant: 0))
     }
-    
+
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        setupView()
         getEntryData()
+        setupView()
     }
     
     // MARK: Event Handling
@@ -126,15 +137,43 @@ extension EntryListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: myView.cellID, for: indexPath) as! EntryListCell
+        cell.entryListData = myView.viewModel?.entryListData
         cell.cellDetails = myView.viewModel?.groupedListData[indexPath.section]
+        if myView.viewModel?.selectedIndex == indexPath {
+            cell.isSelected = true
+        } else {
+            cell.isSelected = false
+        }
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        var rowHeight: CGFloat = 50.0
+        if indexPath == myView.viewModel?.selectedIndex {
+            rowHeight = 111.0
+        }
+        return rowHeight
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var reloadIndex = [IndexPath]()
+        if let prevSelectedIndex = myView.viewModel?.selectedIndex {
+            reloadIndex.append(prevSelectedIndex)
+        }
+        reloadIndex.append(indexPath)
+        if myView.viewModel?.selectedIndex == indexPath {
+            myView.viewModel?.selectedIndex = nil
+        } else {
+            myView.viewModel?.selectedIndex = indexPath
+        }
+        tableView.reloadRows(at: reloadIndex, with: .automatic)
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 
 }

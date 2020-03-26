@@ -70,6 +70,7 @@ struct EntryListModel {
     // MARK: Object model for UI rendering
     
     struct ViewModel {
+        var selectedIndex: IndexPath?
         var entryListData = [Response.Record]()
         var groupedListData = [NewEntryList]()
         init(entryListDataResponse: EntryListModel.Response.EntryList?) {

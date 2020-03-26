@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDE74FD1242C925000B60F72 /* EntryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD0242C925000B60F72 /* EntryListCell.swift */; };
 		CDF69CBC242B73470069AB7B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBB242B73470069AB7B /* Constant.swift */; };
 		CDF69CBE242B7AAB0069AB7B /* EntryListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */; };
 		FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A0192429EAC8003D730E /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDE74FD0242C925000B60F72 /* EntryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListCell.swift; sourceTree = "<group>"; };
 		CDF69CBB242B73470069AB7B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListWorker.swift; sourceTree = "<group>"; };
 		FFA1A0162429EAC8003D730E /* MobileDataUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				FFA1A0502429EADB003D730E /* EntryListView.swift */,
 				FFA1A0512429EADB003D730E /* EntryListPresenter.swift */,
 				FFA1A0522429EADB003D730E /* EntryListViewController.swift */,
+				CDE74FD0242C925000B60F72 /* EntryListCell.swift */,
 			);
 			path = EntryList;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				CDF69CBE242B7AAB0069AB7B /* EntryListWorker.swift in Sources */,
 				FFA1A0572429EADB003D730E /* EntryListRouter.swift in Sources */,
 				FFA1A0592429EADB003D730E /* EntryListPresenter.swift in Sources */,
+				CDE74FD1242C925000B60F72 /* EntryListCell.swift in Sources */,
 				CDF69CBC242B73470069AB7B /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
