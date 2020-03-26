@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CDE74FD1242C925000B60F72 /* EntryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD0242C925000B60F72 /* EntryListCell.swift */; };
+		CDE74FD5242CA06B00B60F72 /* EntryListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD4242CA06B00B60F72 /* EntryListViewControllerTests.swift */; };
+		CDE74FD7242CAB7500B60F72 /* EntryListMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD6242CAB7500B60F72 /* EntryListMemStore.swift */; };
+		CDE74FDB242CABE900B60F72 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = CDE74FDA242CABE900B60F72 /* mock.json */; };
 		CDF69CBC242B73470069AB7B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBB242B73470069AB7B /* Constant.swift */; };
 		CDF69CBE242B7AAB0069AB7B /* EntryListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */; };
 		FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A0192429EAC8003D730E /* AppDelegate.swift */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		CDE74FD0242C925000B60F72 /* EntryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListCell.swift; sourceTree = "<group>"; };
+		CDE74FD4242CA06B00B60F72 /* EntryListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewControllerTests.swift; sourceTree = "<group>"; };
+		CDE74FD6242CAB7500B60F72 /* EntryListMemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListMemStore.swift; sourceTree = "<group>"; };
+		CDE74FDA242CABE900B60F72 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
 		CDF69CBB242B73470069AB7B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListWorker.swift; sourceTree = "<group>"; };
 		FFA1A0162429EAC8003D730E /* MobileDataUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,10 +102,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDE74FD2242C9FF800B60F72 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CDE74FD3242CA00B00B60F72 /* EntryList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CDE74FD3242CA00B00B60F72 /* EntryList */ = {
+			isa = PBXGroup;
+			children = (
+				CDE74FD4242CA06B00B60F72 /* EntryListViewControllerTests.swift */,
+			);
+			path = EntryList;
+			sourceTree = "<group>";
+		};
 		CDF69CBA242B71C50069AB7B /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				FFA1A04D2429EADB003D730E /* EntryListAPIStore.swift */,
+				CDE74FD6242CAB7500B60F72 /* EntryListMemStore.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -136,6 +159,7 @@
 				FFA1A0242429EAC9003D730E /* LaunchScreen.storyboard */,
 				FFA1A0272429EAC9003D730E /* Info.plist */,
 				CDF69CBB242B73470069AB7B /* Constant.swift */,
+				CDE74FDA242CABE900B60F72 /* mock.json */,
 			);
 			path = MobileDataUsage;
 			sourceTree = "<group>";
@@ -143,6 +167,7 @@
 		FFA1A02F2429EAC9003D730E /* MobileDataUsageTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDE74FD2242C9FF800B60F72 /* Scenes */,
 				FFA1A0302429EAC9003D730E /* MobileDataUsageTests.swift */,
 				FFA1A0322429EAC9003D730E /* Info.plist */,
 			);
@@ -296,6 +321,7 @@
 				FFA1A0262429EAC9003D730E /* LaunchScreen.storyboard in Resources */,
 				FFA1A0232429EAC9003D730E /* Assets.xcassets in Resources */,
 				FFA1A0212429EAC8003D730E /* Main.storyboard in Resources */,
+				CDE74FDB242CABE900B60F72 /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +348,7 @@
 			files = (
 				FFA1A0552429EADB003D730E /* EntryListAPIStore.swift in Sources */,
 				FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */,
+				CDE74FD7242CAB7500B60F72 /* EntryListMemStore.swift in Sources */,
 				FFA1A0532429EADB003D730E /* EntryListModels.swift in Sources */,
 				FFA1A0582429EADB003D730E /* EntryListView.swift in Sources */,
 				FFA1A05E2429FE42003D730E /* UIViewExtension.swift in Sources */,
@@ -341,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA1A0312429EAC9003D730E /* MobileDataUsageTests.swift in Sources */,
+				CDE74FD5242CA06B00B60F72 /* EntryListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

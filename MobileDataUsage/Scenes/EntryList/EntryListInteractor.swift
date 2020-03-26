@@ -22,11 +22,10 @@ protocol EntryListDataStore {
 
 class EntryListInteractor: EntryListBusinessLogic, EntryListDataStore {
     var presenter: EntryListPresentationLogic?
-    var worker: EntryListWorker?
+    var worker = EntryListWorker(entryListStoreProtocol: EntryListAPIStore())
     
     func getEntryData() {
-        worker = EntryListWorker(entryListStoreProtocol: EntryListAPIStore())
-        worker?.getEntryData(completion: { [weak self] (entryListData) in
+        worker.getEntryData(completion: { [weak self] (entryListData) in
             self?.presenter?.presentEntryList(response: entryListData)
         })
     }
