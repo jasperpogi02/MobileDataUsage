@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDF69CBC242B73470069AB7B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBB242B73470069AB7B /* Constant.swift */; };
+		CDF69CBE242B7AAB0069AB7B /* EntryListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */; };
 		FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A0192429EAC8003D730E /* AppDelegate.swift */; };
 		FFA1A01C2429EAC8003D730E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A01B2429EAC8003D730E /* SceneDelegate.swift */; };
-		FFA1A01E2429EAC8003D730E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A01D2429EAC8003D730E /* ViewController.swift */; };
 		FFA1A0212429EAC8003D730E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1A01F2429EAC8003D730E /* Main.storyboard */; };
 		FFA1A0232429EAC9003D730E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA1A0222429EAC9003D730E /* Assets.xcassets */; };
 		FFA1A0262429EAC9003D730E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1A0242429EAC9003D730E /* LaunchScreen.storyboard */; };
@@ -18,7 +19,6 @@
 		FFA1A0532429EADB003D730E /* EntryListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A04B2429EADB003D730E /* EntryListModels.swift */; };
 		FFA1A0542429EADB003D730E /* EntryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A04C2429EADB003D730E /* EntryListInteractor.swift */; };
 		FFA1A0552429EADB003D730E /* EntryListAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A04D2429EADB003D730E /* EntryListAPIStore.swift */; };
-		FFA1A0562429EADB003D730E /* EntryListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A04E2429EADB003D730E /* EntryListWorker.swift */; };
 		FFA1A0572429EADB003D730E /* EntryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A04F2429EADB003D730E /* EntryListRouter.swift */; };
 		FFA1A0582429EADB003D730E /* EntryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A0502429EADB003D730E /* EntryListView.swift */; };
 		FFA1A0592429EADB003D730E /* EntryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A0512429EADB003D730E /* EntryListPresenter.swift */; };
@@ -44,10 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDF69CBB242B73470069AB7B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListWorker.swift; sourceTree = "<group>"; };
 		FFA1A0162429EAC8003D730E /* MobileDataUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA1A0192429EAC8003D730E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA1A01B2429EAC8003D730E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFA1A01D2429EAC8003D730E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFA1A0202429EAC8003D730E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFA1A0222429EAC9003D730E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA1A0252429EAC9003D730E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		FFA1A04B2429EADB003D730E /* EntryListModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListModels.swift; sourceTree = "<group>"; };
 		FFA1A04C2429EADB003D730E /* EntryListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListInteractor.swift; sourceTree = "<group>"; };
 		FFA1A04D2429EADB003D730E /* EntryListAPIStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListAPIStore.swift; sourceTree = "<group>"; };
-		FFA1A04E2429EADB003D730E /* EntryListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListWorker.swift; sourceTree = "<group>"; };
 		FFA1A04F2429EADB003D730E /* EntryListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListRouter.swift; sourceTree = "<group>"; };
 		FFA1A0502429EADB003D730E /* EntryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListView.swift; sourceTree = "<group>"; };
 		FFA1A0512429EADB003D730E /* EntryListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListPresenter.swift; sourceTree = "<group>"; };
@@ -94,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDF69CBA242B71C50069AB7B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FFA1A04D2429EADB003D730E /* EntryListAPIStore.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		FFA1A00D2429EAC8003D730E = {
 			isa = PBXGroup;
 			children = (
@@ -121,11 +129,11 @@
 				FFA1A0492429EAD1003D730E /* Scenes */,
 				FFA1A0192429EAC8003D730E /* AppDelegate.swift */,
 				FFA1A01B2429EAC8003D730E /* SceneDelegate.swift */,
-				FFA1A01D2429EAC8003D730E /* ViewController.swift */,
 				FFA1A01F2429EAC8003D730E /* Main.storyboard */,
 				FFA1A0222429EAC9003D730E /* Assets.xcassets */,
 				FFA1A0242429EAC9003D730E /* LaunchScreen.storyboard */,
 				FFA1A0272429EAC9003D730E /* Info.plist */,
+				CDF69CBB242B73470069AB7B /* Constant.swift */,
 			);
 			path = MobileDataUsage;
 			sourceTree = "<group>";
@@ -159,10 +167,10 @@
 		FFA1A04A2429EADB003D730E /* EntryList */ = {
 			isa = PBXGroup;
 			children = (
+				CDF69CBA242B71C50069AB7B /* Services */,
 				FFA1A04B2429EADB003D730E /* EntryListModels.swift */,
 				FFA1A04C2429EADB003D730E /* EntryListInteractor.swift */,
-				FFA1A04D2429EADB003D730E /* EntryListAPIStore.swift */,
-				FFA1A04E2429EADB003D730E /* EntryListWorker.swift */,
+				CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */,
 				FFA1A04F2429EADB003D730E /* EntryListRouter.swift */,
 				FFA1A0502429EADB003D730E /* EntryListView.swift */,
 				FFA1A0512429EADB003D730E /* EntryListPresenter.swift */,
@@ -309,8 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA1A0562429EADB003D730E /* EntryListWorker.swift in Sources */,
-				FFA1A01E2429EAC8003D730E /* ViewController.swift in Sources */,
 				FFA1A0552429EADB003D730E /* EntryListAPIStore.swift in Sources */,
 				FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */,
 				FFA1A0532429EADB003D730E /* EntryListModels.swift in Sources */,
@@ -319,8 +325,10 @@
 				FFA1A0542429EADB003D730E /* EntryListInteractor.swift in Sources */,
 				FFA1A01C2429EAC8003D730E /* SceneDelegate.swift in Sources */,
 				FFA1A05A2429EADB003D730E /* EntryListViewController.swift in Sources */,
+				CDF69CBE242B7AAB0069AB7B /* EntryListWorker.swift in Sources */,
 				FFA1A0572429EADB003D730E /* EntryListRouter.swift in Sources */,
 				FFA1A0592429EADB003D730E /* EntryListPresenter.swift in Sources */,
+				CDF69CBC242B73470069AB7B /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462MSNTRG8;
 				INFOPLIST_FILE = MobileDataUsage/Info.plist;
@@ -502,6 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sg.com.MobileDataUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -511,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462MSNTRG8;
 				INFOPLIST_FILE = MobileDataUsage/Info.plist;
@@ -520,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sg.com.MobileDataUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -12,21 +12,20 @@
 
 import CoreData
 
-protocol EntryListStoreProtocol: class
-{
-    func doSomeWork()
+protocol EntryListStoreProtocol: class {
+    func getEntryData(completion: @escaping(EntryListModel.Response.EntryList?) -> Void)
 }
 
-class EntryListWorker
-{
-    var entryListStoreProtocol: EntryListStoreProtocol
+class EntryListWorker {
+    var entryListStore: EntryListStoreProtocol
     
-    init(entryListStoreProtocol: EntryListStoreProtocol)
-    {
-        self.entryListStoreProtocol = entryListStoreProtocol
+    init(entryListStoreProtocol: EntryListStoreProtocol) {
+        self.entryListStore = entryListStoreProtocol
     }
     
-    func doSomeWork()
-    {
+    func getEntryData(completion: @escaping(EntryListModel.Response.EntryList?) -> Void) {
+        entryListStore.getEntryData { (entryListData) in
+            completion(entryListData)
+        }
     }
 }

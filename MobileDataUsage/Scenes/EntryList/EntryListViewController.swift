@@ -13,7 +13,8 @@
 import UIKit
 
 protocol EntryListDisplayLogic: class {
-    func displaySomething(viewModel: EntryListModel.ViewModel)
+    func displayEntryList(viewModel: EntryListModel.ViewModel)
+    func displayError(errorMsg: String)
 }
 
 class EntryListViewController: UIViewController, EntryListDisplayLogic, EntryListViewProtocol {
@@ -89,27 +90,34 @@ class EntryListViewController: UIViewController, EntryListDisplayLogic, EntryLis
         super.viewDidLoad()
         setup()
         setupView()
-        doSomething()
+        getEntryData()
     }
     
     // MARK: Event Handling
     
-    func doSomething() {
-        let request = EntryListModel.Request()
-        interactor?.doSomething(request: request)
+    func getEntryData() {
+        interactor?.getEntryData()
     }
     
     // MARK: Display Handling
     
-    func displaySomething(viewModel: EntryListModel.ViewModel) {
-        
+    func displayEntryList(viewModel: EntryListModel.ViewModel) {
+        myView.viewModel = viewModel
+        DispatchQueue.main.async {
+            self.myView.dataUsageTable.reloadData()
+        }
+    }
+    
+    func displayError(errorMsg: String) {
+        let alertController = UIAlertController(title: "Error Occured", message: errorMsg, preferredStyle: .alert)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
 extension EntryListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 12
+        return myView.viewModel?.groupedListData.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -118,7 +126,7 @@ extension EntryListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: myView.cellID, for: indexPath) as! EntryListCell
-        cell.textLbl.text = "Hello World"
+        cell.cellDetails = myView.viewModel?.groupedListData[indexPath.section]
         cell.selectionStyle = .none
         return cell
     }

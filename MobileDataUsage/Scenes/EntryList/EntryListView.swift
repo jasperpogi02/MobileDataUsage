@@ -14,7 +14,7 @@ protocol EntryListViewProtocol: class {
 
 class EntryListView: UIView {
     weak var delegate: EntryListViewProtocol?
-    var viewModel = EntryListModel.ViewModel()
+    var viewModel: EntryListModel.ViewModel?
     var cellID = "cellID"
     lazy var dataUsageTable: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
@@ -80,9 +80,18 @@ class EntryListView: UIView {
 
 class EntryListCell: UITableViewCell {
     
-    var cellDetails: EntryListModel.ViewModel.Entry? {
+    var cellDetails: EntryListModel.ViewModel.NewEntryList? {
         didSet {
-            
+            if let volume = cellDetails?.getTotalData() {
+                textLbl.text = volume
+            }
+            if let decreasing = cellDetails?.decrease {
+                if decreasing {
+                    showDecreaseImg(true)
+                } else {
+                    showDecreaseImg(false)
+                }
+            }
         }
     }
     
@@ -100,6 +109,13 @@ class EntryListCell: UITableViewCell {
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    let decreaseImg: UIImageView = {
+        let imgView = UIImageView()
+        imgView.image = #imageLiteral(resourceName: "decrease")
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        return imgView
     }()
     
     func setupView() {
@@ -164,6 +180,40 @@ class EntryListCell: UITableViewCell {
             attribute: .trailing,
             multiplier: 1,
             constant: -16))
+        
+        mainView.addSubview(decreaseImg)
+        addConstraint(NSLayoutConstraint(
+            item: decreaseImg,
+            attribute: .centerY,
+            relatedBy: .equal,
+            toItem: mainView,
+            attribute: .centerY,
+            multiplier: 1,
+            constant: 0))
+        addConstraint(NSLayoutConstraint(
+            item: decreaseImg,
+            attribute: .trailing,
+            relatedBy: .equal,
+            toItem: mainView,
+            attribute: .trailing,
+            multiplier: 1,
+            constant: -16))
+        addConstraint(NSLayoutConstraint(
+            item: decreaseImg,
+            attribute: .width,
+            relatedBy: .equal,
+            toItem: .none,
+            attribute: .width,
+            multiplier: 1,
+            constant: 20))
+        addConstraint(NSLayoutConstraint(
+            item: decreaseImg,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: .none,
+            attribute: .height,
+            multiplier: 1,
+            constant: 20))
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -173,6 +223,10 @@ class EntryListCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func showDecreaseImg(_ show: Bool) {
+        decreaseImg.isHidden = show == true ? false : true
     }
     
 }

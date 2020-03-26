@@ -12,27 +12,22 @@
 
 import UIKit
 
-protocol EntryListBusinessLogic
-{
-    func doSomething(request: EntryListModel.Request)
+protocol EntryListBusinessLogic {
+    func getEntryData()
 }
 
-protocol EntryListDataStore
-{
+protocol EntryListDataStore {
     
 }
 
-class EntryListInteractor: EntryListBusinessLogic, EntryListDataStore
-{
+class EntryListInteractor: EntryListBusinessLogic, EntryListDataStore {
     var presenter: EntryListPresentationLogic?
     var worker: EntryListWorker?
     
-    func doSomething(request: EntryListModel.Request)
-    {
+    func getEntryData() {
         worker = EntryListWorker(entryListStoreProtocol: EntryListAPIStore())
-        worker?.doSomeWork()
-        
-        let response = EntryListModel.Response()
-        presenter?.presentSomething(response: response)
+        worker?.getEntryData(completion: { [weak self] (entryListData) in
+            self?.presenter?.presentEntryList(response: entryListData)
+        })
     }
 }

@@ -14,16 +14,22 @@ import UIKit
 
 protocol EntryListPresentationLogic
 {
-    func presentSomething(response: EntryListModel.Response)
+    func presentEntryList(response: EntryListModel.Response.EntryList?)
 }
 
 class EntryListPresenter: EntryListPresentationLogic
 {
     weak var viewController: EntryListDisplayLogic?
     
-    func presentSomething(response: EntryListModel.Response)
+    func presentEntryList(response: EntryListModel.Response.EntryList?)
     {
-        let viewModel = EntryListModel.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+        guard let success = response?.success else { return }
+        if !success {
+            viewController?.displayError(errorMsg: "Request not successful. Please Try Again.")
+        } else {
+            let viewModel = EntryListModel.ViewModel(entryListDataResponse: response)
+            viewController?.displayEntryList(viewModel: viewModel)
+        }
+        
     }
 }
