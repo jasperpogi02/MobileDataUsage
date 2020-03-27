@@ -34,4 +34,28 @@ class MobileDataUsageUITests: XCTestCase {
         // Then
         XCTAssertEqual(cell.frame.size.height, 111.0)
     }
+    
+    func testFirstCellLabelShouldBeYear2008() {
+        // Given
+        let firstCellLabel = app.staticTexts["dataConsumption"].firstMatch
+        
+        // When
+        let elementQuery = firstCellLabel.label.contains("2008")
+        
+        // Then
+        XCTAssert(elementQuery, "First cell label shown is not of year 2008")
+        
+    }
+    
+    func testLatestCellLabelShouldBeYear2018() {
+        // Given
+        let lastCellLabel = app.staticTexts.element(boundBy: 10)
+        
+        // When
+        let elementQuery = lastCellLabel.label.contains("2018")
+        
+        // Then
+        XCTAssert(elementQuery, "Last cell label shown is not of year 2018")
+        
+    }
 }
