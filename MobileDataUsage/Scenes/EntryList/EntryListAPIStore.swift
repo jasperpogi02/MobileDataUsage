@@ -31,6 +31,7 @@ class EntryListAPIStore: EntryListStoreProtocol {
                 do {
                     let decoder = JSONDecoder()
                     let entryData = try decoder.decode(EntryListModel.Response.EntryList.self, from: data)
+                    Tool.shared.saveFile(data: data)
                     completion(entryData)
                 } catch {
                     completion(nil)
