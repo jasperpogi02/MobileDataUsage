@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDB6D453242DD149005D30EC /* EntryListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6D452242DD149005D30EC /* EntryListInteractorTests.swift */; };
+		CDB6D455242DD2CA005D30EC /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6D454242DD2CA005D30EC /* MockData.swift */; };
 		CDE74FD1242C925000B60F72 /* EntryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD0242C925000B60F72 /* EntryListCell.swift */; };
 		CDE74FD5242CA06B00B60F72 /* EntryListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD4242CA06B00B60F72 /* EntryListViewControllerTests.swift */; };
 		CDE74FD7242CAB7500B60F72 /* EntryListMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD6242CAB7500B60F72 /* EntryListMemStore.swift */; };
 		CDE74FDB242CABE900B60F72 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = CDE74FDA242CABE900B60F72 /* mock.json */; };
+		CDF2E37A242DE91A004514F8 /* EntryListAPIStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2E379242DE91A004514F8 /* EntryListAPIStoreTests.swift */; };
 		CDF69CBC242B73470069AB7B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBB242B73470069AB7B /* Constant.swift */; };
 		CDF69CBE242B7AAB0069AB7B /* EntryListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */; };
 		FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1A0192429EAC8003D730E /* AppDelegate.swift */; };
@@ -48,10 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDB6D452242DD149005D30EC /* EntryListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListInteractorTests.swift; sourceTree = "<group>"; };
+		CDB6D454242DD2CA005D30EC /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		CDE74FD0242C925000B60F72 /* EntryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListCell.swift; sourceTree = "<group>"; };
 		CDE74FD4242CA06B00B60F72 /* EntryListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewControllerTests.swift; sourceTree = "<group>"; };
 		CDE74FD6242CAB7500B60F72 /* EntryListMemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListMemStore.swift; sourceTree = "<group>"; };
 		CDE74FDA242CABE900B60F72 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
+		CDF2E379242DE91A004514F8 /* EntryListAPIStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListAPIStoreTests.swift; sourceTree = "<group>"; };
 		CDF69CBB242B73470069AB7B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CDF69CBD242B7AAB0069AB7B /* EntryListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListWorker.swift; sourceTree = "<group>"; };
 		FFA1A0162429EAC8003D730E /* MobileDataUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE74FD3242CA00B00B60F72 /* EntryList */,
+				CDB6D454242DD2CA005D30EC /* MockData.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -113,6 +120,8 @@
 		CDE74FD3242CA00B00B60F72 /* EntryList */ = {
 			isa = PBXGroup;
 			children = (
+				CDF2E379242DE91A004514F8 /* EntryListAPIStoreTests.swift */,
+				CDB6D452242DD149005D30EC /* EntryListInteractorTests.swift */,
 				CDE74FD4242CA06B00B60F72 /* EntryListViewControllerTests.swift */,
 			);
 			path = EntryList;
@@ -368,7 +377,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA1A0312429EAC9003D730E /* MobileDataUsageTests.swift in Sources */,
+				CDF2E37A242DE91A004514F8 /* EntryListAPIStoreTests.swift in Sources */,
+				CDB6D455242DD2CA005D30EC /* MockData.swift in Sources */,
 				CDE74FD5242CA06B00B60F72 /* EntryListViewControllerTests.swift in Sources */,
+				CDB6D453242DD149005D30EC /* EntryListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462MSNTRG8;
 				INFOPLIST_FILE = MobileDataUsage/Info.plist;
@@ -553,7 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 462MSNTRG8;
 				INFOPLIST_FILE = MobileDataUsage/Info.plist;
