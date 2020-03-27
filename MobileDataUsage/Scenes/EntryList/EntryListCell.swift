@@ -39,6 +39,7 @@ class EntryListCell: UITableViewCell {
     
     let textLbl: UILabel = {
         let label = UILabel()
+        label.accessibilityIdentifier = "dataConsumption"
         label.numberOfLines = 0
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
