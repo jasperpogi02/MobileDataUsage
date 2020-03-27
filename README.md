@@ -7,6 +7,21 @@ A native iOS mobile application project that shows total data (Petabytes) consum
 * Xcode 11.4
 * Deployment Target iOS 13.2
 
+## Getting Code Coverage Report
+
+* Install xcov
+```
+sudo gem install xcov
+```
+* Go to project directory
+```
+cd /pathtoproject
+```
+* Copy & Paste to Terminal
+```
+xcov -p MobileDataUsage.xcodeproj -s MobileDataUsage -o xcov_output
+```
+
 ## Authors
 
 * **Jasper Goce**
