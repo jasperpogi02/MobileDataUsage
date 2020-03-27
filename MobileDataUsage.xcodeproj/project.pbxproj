@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDB01A6E242E0BD400B2C56F /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB01A6D242E0BD400B2C56F /* Tool.swift */; };
 		CDB6D453242DD149005D30EC /* EntryListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6D452242DD149005D30EC /* EntryListInteractorTests.swift */; };
 		CDB6D455242DD2CA005D30EC /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB6D454242DD2CA005D30EC /* MockData.swift */; };
 		CDE74FD1242C925000B60F72 /* EntryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE74FD0242C925000B60F72 /* EntryListCell.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CDB01A6D242E0BD400B2C56F /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		CDB6D452242DD149005D30EC /* EntryListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListInteractorTests.swift; sourceTree = "<group>"; };
 		CDB6D454242DD2CA005D30EC /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		CDE74FD0242C925000B60F72 /* EntryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CDB01A67242E020A00B2C56F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CDB01A6D242E0BD400B2C56F /* Tool.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		CDE74FD2242C9FF800B60F72 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 		FFA1A0182429EAC8003D730E /* MobileDataUsage */ = {
 			isa = PBXGroup;
 			children = (
+				CDB01A67242E020A00B2C56F /* Helper */,
 				FFA1A05C2429FE32003D730E /* Extensions */,
 				FFA1A0492429EAD1003D730E /* Scenes */,
 				FFA1A0192429EAC8003D730E /* AppDelegate.swift */,
@@ -356,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA1A0552429EADB003D730E /* EntryListAPIStore.swift in Sources */,
+				CDB01A6E242E0BD400B2C56F /* Tool.swift in Sources */,
 				FFA1A01A2429EAC8003D730E /* AppDelegate.swift in Sources */,
 				CDE74FD7242CAB7500B60F72 /* EntryListMemStore.swift in Sources */,
 				FFA1A0532429EADB003D730E /* EntryListModels.swift in Sources */,

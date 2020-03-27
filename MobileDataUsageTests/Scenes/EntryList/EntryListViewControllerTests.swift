@@ -32,11 +32,16 @@ class EntryListViewControllerTests: XCTestCase {
         // MARK: Method call expectations
         
         var getEntryDataCalled = false
+        var getCachedEntryDataCalled = false
         
         // MARK: Spied methods
         
         func getEntryData() {
             getEntryDataCalled = true
+        }
+        
+        func getCachedEntryData() {
+            getCachedEntryDataCalled = true
         }
     }
     
