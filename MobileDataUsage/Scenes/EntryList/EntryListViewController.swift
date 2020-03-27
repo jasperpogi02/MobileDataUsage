@@ -107,6 +107,7 @@ class EntryListViewController: UIViewController, EntryListDisplayLogic, EntryLis
     // MARK: Event Handling
     
     func getEntryData() {
+        interactor?.getCachedEntryData()
         interactor?.getEntryData()
     }
     

@@ -14,6 +14,7 @@ import UIKit
 
 protocol EntryListBusinessLogic {
     func getEntryData()
+    func getCachedEntryData()
 }
 
 protocol EntryListDataStore {
@@ -28,5 +29,18 @@ class EntryListInteractor: EntryListBusinessLogic, EntryListDataStore {
         worker.getEntryData(completion: { [weak self] (entryListData) in
             self?.presenter?.presentEntryList(response: entryListData)
         })
+    }
+    
+    func getCachedEntryData() {
+        // display cache before requesting a new one
+        if let cachedEntryData = Tool.shared.getFile() {
+            do {
+                let decoder = JSONDecoder()
+                let cachedData = try decoder.decode(EntryListModel.Response.EntryList.self, from: cachedEntryData)
+                self.presenter?.presentEntryList(response: cachedData)
+            } catch {
+                print(error)
+            }
+        }
     }
 }
