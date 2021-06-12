@@ -25,6 +25,7 @@ xcuserdata/
 *.xcuserdata
 */xcuserdata/*
 *xcworkspace/xcuserdata/*
+*.xcuserdata/
 
 ## Other
 *.moved-aside
