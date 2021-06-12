@@ -22,7 +22,7 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 *.xcuserstate
-MobileDataUsage.xcodeproj/project.xcworkspace/xcuserdata/cdgtaxi.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserdata
 
 ## Other
 *.moved-aside
